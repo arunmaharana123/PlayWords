@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="" />
+	</definition>
+	
+	<!-- Login Page -->
+	<definition name="403" extends="base-definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/403.jsp" />
+	</definition>
+
+	<!-- Login Page -->
+	<definition name="login" extends="base-definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+	</definition>
+
+	<!-- Word Page -->
+	<definition name="word/train" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/word-train.jsp" />
+	</definition>
+
+	<definition name="word/stats" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/word-stats.jsp" />
+	</definition>
+
+	<!-- Paragraph Page -->
+	<definition name="paragraph/view" extends="base-definition">
+		<put-attribute name="title" value="Paragrahp View" />
+		<put-attribute name="body" value="/WEB-INF/jsp/paragraph-view.jsp" />
+	</definition>
+
+	<definition name="paragraph/add" extends="base-definition">
+		<put-attribute name="title" value="Paragraph Add" />
+		<put-attribute name="body" value="/WEB-INF/jsp/paragraph-add.jsp" />
+	</definition>
+
+	<!-- Search Page -->
+	<definition name="search/related" extends="base-definition">
+		<put-attribute name="title" value="Search" />
+		<put-attribute name="body" value="/WEB-INF/jsp/search-tag.jsp" />
+	</definition>
+
+	<!-- Search Page -->
+	<definition name="tag/stats" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tag-stats.jsp" />
+	</definition>
+
+	<!-- Contact Page -->
+	<definition name="contact" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/contact.jsp" />
+	</definition>
+
+	<!-- About Page -->
+	<definition name="about" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/jsp/about.jsp" />
+	</definition>
+
+
+
+</tiles-definitions>
