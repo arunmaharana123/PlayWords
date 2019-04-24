@@ -1,6 +1,7 @@
 package com.arun.word.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,8 +34,8 @@ public class ParagraphService {
 
 	}
 
-	public Paragraph findById(long para_id) {
-		return repository.findOne(para_id);
+	public Optional<Paragraph> findById(long para_id) {
+		return repository.findById(para_id);
 	}
 
 	public Paragraph findOneParagraphs() {

@@ -2,6 +2,7 @@ package com.arun.word.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -55,10 +56,10 @@ public class ParagraphController {
 		if (!StringUtils.isEmpty(id)) {
 			try {
 				long para_id = Long.parseLong(id);
-				Paragraph paragraph = paragraphService.findById(para_id);
-				paragraph.setStatus(1);
-				paragraph.setWords(words);
-				paragraphService.save(paragraph);
+				Optional<Paragraph> paragraph = paragraphService.findById(para_id);
+				paragraph.get().setStatus(1);
+				paragraph.get().setWords(words);
+				paragraphService.save(paragraph.get());
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 			}
@@ -72,9 +73,9 @@ public class ParagraphController {
 		if (!StringUtils.isEmpty(id)) {
 			try {
 				long para_id = Long.parseLong(id);
-				Paragraph paragraph = paragraphService.findById(para_id);
-				paragraph.setActive(false);
-				paragraphService.save(paragraph);
+				Optional<Paragraph> paragraph = paragraphService.findById(para_id);
+				paragraph.get().setActive(false);
+				paragraphService.save(paragraph.get());
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 			}
@@ -88,9 +89,9 @@ public class ParagraphController {
 		if (!StringUtils.isEmpty(id)) {
 			try {
 				long para_id = Long.parseLong(id);
-				Paragraph paragraph = paragraphService.findById(para_id);
-				paragraph.setActive(false);
-				paragraphService.save(paragraph);
+				Optional<Paragraph> paragraph = paragraphService.findById(para_id);
+				paragraph.get().setActive(false);
+				paragraphService.save(paragraph.get());
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 			}
